@@ -6,12 +6,10 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 20:32:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/14 16:03:31 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 19:50:28 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *prefix, char const *suffix)

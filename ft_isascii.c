@@ -6,9 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 15:14:34 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/11 22:03:46 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:35:06 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isascii(char c)
 {

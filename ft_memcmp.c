@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 15:06:07 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/11 22:06:22 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 19:53:13 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int		ft_memcmp(const void *str1, const void *str2, size_t size)
 {
