@@ -6,9 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 12:18:29 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 19:52:18 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:54:22 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 12:55:29 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 15:04:23 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:06:22 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *str, int fd)
 {

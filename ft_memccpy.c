@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 12:57:41 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/11 22:05:25 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:55:16 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t size)
 {

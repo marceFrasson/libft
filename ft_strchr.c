@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:54:18 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/14 16:35:49 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:53:42 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

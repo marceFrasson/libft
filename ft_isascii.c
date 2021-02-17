@@ -5,14 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/02 15:14:34 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 20:35:06 by mfrasson         ###   ########.fr       */
+/*   Created: 2021/02/16 12:25:36 by mfrasson          #+#    #+#             */
+/*   Updated: 2021/02/16 12:32:45 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int		ft_isascii(char c)
 {
-	return (c >= 0 && c <= 127);
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }

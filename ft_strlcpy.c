@@ -6,11 +6,10 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:48:56 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/11 22:29:24 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:54:09 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t		ft_strlcpy(char *dst, const char *src, size_t size)

@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 15:00:03 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 15:04:48 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:06:18 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *str, int fd)
 {

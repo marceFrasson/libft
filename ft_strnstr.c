@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:54:49 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/12 15:22:02 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:54:41 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *src, const char *to_find, size_t size)
 {

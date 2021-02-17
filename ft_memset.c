@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 16:27:16 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/11 22:27:28 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:55:31 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t size)
 {
