@@ -1,17 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/19 14:22:35 by mfrasson          #+#    #+#             */
+/*   Updated: 2021/02/19 14:23:51 by mfrasson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-
-typedef struct		s_list
-{
-	void			*content;
-	struct s_list	*next;
-}
-
-					t_list;
 
 /*
 ** part 1
@@ -56,12 +60,5 @@ char		*ft_strjoin(char const *prefix, char const *suffix);
 char		*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 char		*ft_strtrim(char const *str, char const *ref);
 char		*ft_substr(char const *str, unsigned int index, size_t size);
-
-/*
-** extra
-*/
-
-char	*ft_strncpy(char *dest, const char *src, unsigned int n);
-
 
 #endif

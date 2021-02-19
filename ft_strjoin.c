@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 20:32:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 19:50:28 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:20:12 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *prefix, char const *suffix)
 {
-	char *str;
-	int i;
-	int j;
+	char	*str;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;

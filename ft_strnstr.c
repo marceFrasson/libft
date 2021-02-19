@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:54:49 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 20:54:41 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:24:50 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *src, const char *to_find, size_t size)
 {
-	size_t				i;
-	size_t				j;
-	size_t				count;
+	size_t			i;
+	size_t			j;
+	size_t			count;
 	unsigned int	flag;
 	char			*pointer;
 
