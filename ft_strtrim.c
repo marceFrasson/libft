@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 08:43:34 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/18 11:25:25 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 15:12:26 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strtrim(char const *str, char const *ref)
 		return (NULL);
 	while (*str && ft_strchr(ref, *str))
 		str++;
-	while (size && ft_strrchr(ref, str[size]))
+	while (size && ft_strchr(ref, str[size]))
 		size--;
 	return (ft_substr(str, 0, size + 1));
 }
