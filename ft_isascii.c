@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 12:25:36 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/16 12:32:45 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:58:08 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(char c)
+int		ft_isascii(int 	c)
 {
 	if (c >= 0 && c <= 127)
 	{
