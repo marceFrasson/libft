@@ -6,26 +6,25 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 15:23:39 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 15:23:42 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 16:00:23 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *str, char const *ref)
 {
-	size_t	start;
-	size_t	len;
+	size_t	i;
+	size_t	size;
 
-	if (s1 == NULL || set == NULL)
+	i = 0;
+	if (!str || !ref)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
-		start++;
-	len = ft_strlen(&s1[start]);
-	if (len != 0)
-		while (s1[start + len - 1]
-				&& ft_strrchr(set, s1[start + len - 1]) != NULL)
-			len--;
-	return (ft_substr(s1, start, len));
+	while (str[i] && ft_strchr(ref, str[i]))
+		i++;
+	size = ft_strsize(&str[i]);
+	if (size)
+		while (str[i + size - 1] && ft_strrchr(ref, str[i + size - 1]))
+			size--;
+	return (ft_substr(str, i, size));
 }
