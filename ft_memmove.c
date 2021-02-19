@@ -6,21 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 15:31:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 14:33:56 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:47:18 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-static void	els(unsigned char *dst1, unsigned char *src1, size_t i, size_t size)
-{
-	i = size;
-	while (i > 0)
-	{
-		i--;
-		((char *)dst1)[i] = ((char *)src1)[i];
-	}
-}
 
 void		*ft_memmove(void *dst, const void *src, size_t size)
 {
@@ -30,22 +20,22 @@ void		*ft_memmove(void *dst, const void *src, size_t size)
 
 	dst1 = (unsigned char *)dst;
 	src1 = (unsigned char *)src;
-	i = 0;
-	if (!dst1 && !src1)
+	i = size;
+	if (dst == src)
 	{
-		return (NULL);
+		return (dst);
 	}
-	if (dst1 < src1)
+	if (dst1 > src1)
 	{
-		while (i <= size)
+		while (i > 0)
 		{
-			((char *)dst1)[i - 1] = ((char *)src1)[i - 1];
-			i++;
+			dst1[i - 1] = src1[i - 1];
+			i--;
 		}
 	}
 	else
 	{
-		els(dst1, src1, i, size);
+		ft_memcpy(dst, src, size);
 	}
 	return (dst1);
 }
