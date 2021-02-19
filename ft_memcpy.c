@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 13:58:22 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 19:55:16 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:21:40 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t size)
 {
+	size_t		i;
 	char		*dst1;
 	const char	*src1;
 
+	i = 0;
 	dst1 = (char *)dst;
 	src1 = (char *)src;
-	if (!(dst) && !(src) && (size > 0))
-		return (NULL);
-	while (size > 0)
+	if (!dst && !src)
 	{
-		*dst1 = *src1;
-		dst1++;
-		src1++;
-		size--;
+		return (0);
 	}
-	return (dst);
+	while (i < size && dst != src)
+	{
+		dst1[i] = src1[i];
+		i++;
+	}
+	return (dst1);
 }
