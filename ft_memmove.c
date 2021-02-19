@@ -6,15 +6,23 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 15:31:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 14:18:56 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:33:56 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	els(size_t i, size_t size, unsigned char *dst1, unsigned char *src1);
+static void	els(unsigned char *dst1, unsigned char *src1, size_t i, size_t size)
+{
+	i = size;
+	while (i > 0)
+	{
+		i--;
+		((char *)dst1)[i] = ((char *)src1)[i];
+	}
+}
 
-void	*ft_memmove(void *dst, const void *src, size_t size)
+void		*ft_memmove(void *dst, const void *src, size_t size)
 {
 	unsigned char	*dst1;
 	unsigned char	*src1;
@@ -40,14 +48,4 @@ void	*ft_memmove(void *dst, const void *src, size_t size)
 		els(dst1, src1, i, size);
 	}
 	return (dst1);
-}
-
-void	els(unsigned char *dst1, unsigned char *src1, size_t i, size_t size)
-{
-	i = size;
-	while (i > 0)
-	{
-		i--;
-		((char *)dst1)[i] = ((char *)src1)[i];
-	}
 }
