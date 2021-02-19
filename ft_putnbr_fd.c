@@ -6,20 +6,20 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 13:00:00 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 14:59:20 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/17 15:08:18 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
 	unsigned nbr;
 
 	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
 		nbr = n * -1;
+		ft_putchar_fd('-', fd);
 	}
 	else
 	{

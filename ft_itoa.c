@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:16:33 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/17 14:42:40 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:52:06 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char			*ft_itoa(int n)
 	ten = 1;
 	nbr = n;
 	nbr *= n < 0 ? -1 : 1;
+	if (n == -2147483648)
+		return (ft_substr("-2147483648", 0, 11));
 	while (nbr >= 10 && ++count)
 		nbr /= 10;
 	size = count;

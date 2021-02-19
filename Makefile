@@ -6,7 +6,7 @@
 #    By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/05 12:40:00 by mfrasson          #+#    #+#              #
-#    Updated: 2021/02/17 14:28:29 by mfrasson         ###   ########.fr        #
+#    Updated: 2021/02/18 20:44:48 by mfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,8 @@ SRC	= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strlcat.c \
 	  ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 	  ft_tolower.c ft_toupper.c ft_calloc.c ft_strdup.c ft_substr.c \
-	  ft_strjoin.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c \
-	  ft_putendl_fd.c ft_itoa.c ft_putnbr_fd.c \
-	  #ft_split.c ft_strmapi.c 
+	  ft_strjoin.c ft_putchar_fd.c ft_putstr_fd.c ft_strtrim.c \
+	  ft_putendl_fd.c ft_itoa.c ft_putnbr_fd.c ft_strmapi.c ft_split.c
 
 
 CC=clang

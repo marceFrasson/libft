@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 16:12:07 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 19:52:04 by mfrasson         ###   ########.fr       */
+/*   Created: 2021/02/18 08:43:34 by mfrasson          #+#    #+#             */
+/*   Updated: 2021/02/18 11:25:25 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,14 @@
 
 char	*ft_strtrim(char const *str, char const *ref)
 {
-	char *strim;
-	int i;
-	int j;
-	int k;
-	int l;
+	size_t size;
 
-	i = 0;
-	j = ft_strlen(str) - 1;
-	k = ft_strlen(ref) - 1;
-	l = 0;
-	strim = "";
+	size = ft_strlen(str);
 	if (!str || !ref)
 		return (NULL);
-	while (str[i] && str[i] == ref[i])
-		i++;
-	while (str[j] && str[j] == ref[k])
-	{
-		j--;
-		k--;
-	}
-	while (i < j)
-	{
-		strim[l] = str[i];
-		i++;
-		l++;
-	}
-	if (!(strim = malloc(ft_strlen(strim))))
-		return (NULL);
-	strim[i] = '\0';
-	return (strim);
+	while (*str && ft_strchr(ref, *str))
+		str++;
+	while (size && ft_strrchr(ref, str[size]))
+		size--;
+	return (ft_substr(str, 0, size + 1));
 }

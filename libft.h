@@ -57,4 +57,11 @@ char		*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 char		*ft_strtrim(char const *str, char const *ref);
 char		*ft_substr(char const *str, unsigned int index, size_t size);
 
+/*
+** extra
+*/
+
+char	*ft_strncpy(char *dest, const char *src, unsigned int n);
+
+
 #endif
