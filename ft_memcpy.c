@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 13:58:22 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 19:48:15 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 19:50:03 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t size)
 		src1++;
 		size--;
 	}
-	return (dst1);
+	return (dst);
 }
