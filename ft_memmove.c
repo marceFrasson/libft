@@ -6,11 +6,11 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 15:31:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 20:47:18 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:48:55 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void		*ft_memmove(void *dst, const void *src, size_t size)
 {
