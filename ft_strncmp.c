@@ -6,34 +6,13 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:55:14 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 21:39:19 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 21:40:22 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
 int		ft_strncmp(const char *string1, const char *string2, size_t size)
-{
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
-
-	i = 0;
-	str1 = (unsigned char *)string1;
-	str2 = (unsigned char *)string2;
-	while (i < size && (str1[i] || str1[i]))
-	{
-		if (str1[i] != str2[i])
-		{
-			return (str1[i] - str2[i]);
-		}
-		i++;
-	}
-	return (0);
-}*/
-
-int	ft_strncmp(const char *string1, const char *string2, size_t size)
 {
 	size_t			i;
 	unsigned char	*str1;
