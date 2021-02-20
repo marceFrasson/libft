@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:55:14 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 21:20:03 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 21:22:15 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_strncmp(const char *string1, const char *string2, size_t size)
 		}
 		i++;
 	}
-	while (i < size && (!str1 || !str2)
+	while (i < size && (!str1 || !str2))
 	{
 		return (str1[i] - str2[i]);
 	}
