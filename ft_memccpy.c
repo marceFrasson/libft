@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 12:57:41 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 20:39:53 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:41:16 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t size)
 {
 	unsigned char	*dst1;
 	unsigned char	*src1;
-	size_t	i;
+	size_t			i;
 
 	dst1 = (unsigned char *)dst;
 	src1 = (unsigned char *)src;
