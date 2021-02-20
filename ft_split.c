@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 22:23:55 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:30:49 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ static char		*ft_strndup(const char *s, size_t n)
 {
 	char *str;
 
+	if (!s || !n)
+		return (NULL);
 	if (!(str = (char *)malloc(sizeof(char) * n + 1)))
 		return (NULL);
 	str = ft_strncpy(str, s, n);
