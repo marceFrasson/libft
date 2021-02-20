@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 14:19:52 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:16:48 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ char			**ft_split(char const *str, char c)
 		return (NULL);
 	while (str[i])
 	{
-		while (str[i] == c)
-			i++;
+		while (str[i++] == c)
 		j = i;
 		while (str[i] && str[i] != c)
 			i++;
