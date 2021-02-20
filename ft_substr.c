@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:16:57 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 22:08:59 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:11:07 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *str, unsigned int index, size_t size)
 		return (NULL);
 	if (!str || !substr)
 		return (NULL);
-	while ((i < size) && ((index + 1) < ft_strlen(str)) && (str(index + 1))
+	while ((i < size) && ((index + 1) < ft_strlen(str)) && (str[index + 1])
 	{
 		substr[i] = str[index + i];
 		i++;
