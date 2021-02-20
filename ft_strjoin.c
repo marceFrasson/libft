@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 20:32:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 22:14:25 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 23:17:01 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *prefix, char const *suffix)
 	j = 0;
 	if (!prefix || !suffix)
 		return (NULL);
-	if (!(str = malloc(ft_strlen(prefix) + ft_strlen(suffix))))
+	if (!(str = (char *)malloc(ft_strlen(prefix) + ft_strlen(suffix) + 1)))
 		return (NULL);
 	while (prefix[i])
 	{
