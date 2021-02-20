@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:16:33 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 14:17:52 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:34:44 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,10 @@ char			*ft_itoa(int n)
 	while (count-- > 0)
 		ten *= 10;
 	if (n < 0)
-		str = (char *)malloc(sizeof(char) * size + 3);
+	{
+		if (!(str = (char *)malloc(sizeof(char) * size + 3))
+			return (NULL);
+	}
 	str = ft_putchar(nbr, n, size, ten);
 	return (str);
 }
