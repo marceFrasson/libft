@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 15:06:07 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 19:38:28 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:25:14 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_memcmp(const void *str1, const void *str2, size_t size)
 	s1 = (unsigned char *)str1;
 	s2 = (unsigned char *)str2;
 	i = 0;
-	while ((i < size)
+	while (i < size)
 	{
 		if (s1[i] != s2[i])
 		{

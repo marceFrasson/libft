@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 22:18:05 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:23:55 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char			**ft_split(char const *str, char c)
 
 	i = 0;
 	k = 0;
+	if (!str || !c)
+		return (NULL);
 	if (!(array = (char **)malloc(sizeof(char *) * (word_count(str, c) + 1))))
 		return (NULL);
 	while (str[i])
@@ -81,10 +83,7 @@ char			**ft_split(char const *str, char c)
 		while (str[i] && str[i] != c)
 			i++;
 		if (i > j)
-		{
-			array[k] = ft_strndup(str + j, i - j);
-			k++;
-		}
+			*(array + k++) = ft_strndup(str + j, i - j);
 	}
 	array[k] = NULL;
 	return (array);
