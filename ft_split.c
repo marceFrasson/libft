@@ -85,10 +85,7 @@ char			**ft_split(char const *str, char c)
 		while (str[i] && str[i] != c)
 			i++;
 		if (i > j)
-		{
-			array[k] = ft_strndup(str + j, i - j);
-			k++;
-		}
+			*(array + k++) = ft_strndup(str + j, i - j);
 	}
 	array[k] = NULL;
 	return (array);
