@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/21 18:22:37 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/21 19:02:56 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int		word_count(const char *str, char c)
 {
-	int i;
-	int count;
+	int					i;
+	int					count;
 
 	i = 0;
 	count = 0;
@@ -35,7 +35,7 @@ static int		word_count(const char *str, char c)
 
 char			*ft_strncpy(char *dest, const char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int		i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
@@ -53,7 +53,7 @@ char			*ft_strncpy(char *dest, const char *src, unsigned int n)
 
 static char		*ft_strndup(const char *s, size_t n)
 {
-	char *str;
+	char				*str;
 
 	if (!s || !n)
 		return (NULL);
@@ -66,10 +66,10 @@ static char		*ft_strndup(const char *s, size_t n)
 
 char			**ft_split(char const *str, char c)
 {
-	char	**array;
-	int		i;
-	int		j;
-	int		k;
+	char				**array;
+	int					i;
+	int					j;
+	int					k;
 
 	i = 0;
 	k = 0;

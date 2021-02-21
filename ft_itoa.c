@@ -6,13 +6,13 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:16:33 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/21 18:34:13 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/21 19:03:41 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_nbrdigt(unsigned int nbr, int n)
+static int			ft_nbrdigt(unsigned int nbr, int n)
 {
 	unsigned int	count;
 
