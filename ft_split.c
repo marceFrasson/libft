@@ -6,87 +6,69 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/21 19:02:56 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/21 19:16:54 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		word_count(const char *str, char c)
+static size_t	ft_split_counter(char const *s, char c)
 {
-	int					i;
-	int					count;
+	size_t	splits;
+	int		i;
 
+	splits = 0;
 	i = 0;
-	count = 0;
-	while (str[i])
+	while (s[i])
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != c)
+		if (s[i] == c)
 		{
-			count++;
-			while (str[i] && str[i] != c)
-				i++;
+			i++;
+			continue ;
 		}
-	}
-	return (count);
-}
-
-char			*ft_strncpy(char *dest, const char *src, unsigned int n)
-{
-	unsigned int		i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
-static char		*ft_strndup(const char *s, size_t n)
-{
-	char				*str;
-
-	if (!s || !n)
-		return (NULL);
-	if (!(str = (char *)malloc(sizeof(char) * n + 1)))
-		return (NULL);
-	str = ft_strncpy(str, s, n);
-	str[n] = '\0';
-	return (str);
-}
-
-char			**ft_split(char const *str, char c)
-{
-	char				**array;
-	int					i;
-	int					j;
-	int					k;
-
-	i = 0;
-	k = 0;
-	if (!str)
-		return (NULL);
-	if (!(array = (char **)malloc(sizeof(char *) * (word_count(str, c)) + 1)))
-		return (NULL);
-	while (str[i])
-	{
-		while (str[i] == c)
+		splits++;
+		while (s[i] && s[i] != c)
 			i++;
-		j = i;
-		while (str[i] && str[i] != c)
-			i++;
-		if (i > j)
-			*(array + k++) = ft_strndup(str + j, i - j);
 	}
-	array[k] = NULL;
-	return (array);
+	return (splits);
 }
+
+static void		*ft_free_strings(char **strings)
+{
+	if (strings == NULL)
+		return (NULL);
+	while (*strings != NULL)
+		free(*strings++);
+	free(strings);
+	return (NULL);
+}
+
+char			**ft_split(char const *s, char c)
+{
+	char	**strs;
+	size_t	a;
+	size_t	i;
+	size_t	j;
+
+	if (s == NULL)
+		return (NULL);
+	a = ft_split_counter(s, c);
+	if ((strs = (char**)malloc(sizeof(char*) * (a + 1))) == NULL)
+		return (NULL);
+	a = 0;
+	j = -1;
+	while (s[++j])
+	{
+		if (s[j] == c)
+			continue ;
+		i = 0;
+		while (s[j + i] && s[j + i] != c)
+			i++;
+		if ((strs[a++] = ft_substr(s, j, i)) == NULL)
+			return (ft_free_strings(strs));
+		j += i - 1;
+	}
+	strs[a] = NULL;
+	return (strs);
+}
+
