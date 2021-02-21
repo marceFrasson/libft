@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:09:23 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/21 19:37:05 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/02/21 19:39:21 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char		**ft_split(char const *str, char c)
 	int		count;
 	int		i;
 
-	if (!str || !(split = (char **)malloc((wcnt(s, c) + 1) * sizeof(char *))))
+	if (!str || !(split = (char **)malloc((wcnt(str, c) + 1) * sizeof(char *))))
 		return (NULL);
 	word = 0;
 	count = 0;
