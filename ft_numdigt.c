@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_numdigt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 12:55:29 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/06/09 13:54:15 by mfrasson         ###   ########.fr       */
+/*   Created: 2021/06/05 00:12:20 by mfrasson          #+#    #+#             */
+/*   Updated: 2021/06/05 00:23:50 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *str, int fd)
+int	ft_numdigt(int unsigned base, int n)
 {
-	int	i;
+	unsigned int	cont;
+	unsigned int	num;
 
-	i = 0;
-	if (!str)
-		return ;
-	while (str[i])
+	if (n < 0)
 	{
-		write(fd, &str[i], 1);
-		i++;
+		num = -n;
+		cont = 2;
 	}
-	write(fd, "\n", 1);
+	else
+	{
+		num = n;
+		cont = 1;
+	}
+	while (num >= base && cont++)
+		num /= base;
+	return (cont);
 }

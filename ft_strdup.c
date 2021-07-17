@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 23:16:41 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 19:10:49 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:00:59 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ char	*ft_strdup(const char *str)
 	int		i;
 
 	i = 0;
-	if (!(dst = malloc(ft_strlen(str) + 1)))
-	{
+	dst = malloc(ft_strlen(str) + 1);
+	if (!dst)
 		return (NULL);
-	}
 	while (str[i] != '\0')
 	{
 		dst[i] = str[i];

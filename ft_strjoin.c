@@ -3,40 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marce <marce@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 20:32:10 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 23:17:01 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/13 18:41:30 by marce            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *prefix, char const *suffix)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
+	char	*string;
 	int		i;
-	int		j;
+	int		end_s1;
 
-	i = 0;
-	j = 0;
-	if (!prefix || !suffix)
+	if (!s1 || !s2)
 		return (NULL);
-	if (!(str = (char *)malloc(ft_strlen(prefix) + ft_strlen(suffix) + 1)))
+	string = (char *)malloc(((ft_strlen(s1)) + (ft_strlen(s2)) + 1));
+	if (string == NULL)
 		return (NULL);
-	while (prefix[i])
-	{
-		str[j] = prefix[i];
-		i++;
-		j++;
-	}
 	i = 0;
-	while (suffix[i])
+	while (s1[i] != '\0')
 	{
-		str[j] = suffix[i];
+		string[i] = s1[i];
 		i++;
-		j++;
 	}
-	str[j] = '\0';
-	return (str);
+	end_s1 = i;
+	i = 0;
+	while (s2[i] != '\0')
+	{
+		string[end_s1 + i] = s2[i];
+		i++;
+	}
+	string[end_s1 + i] = '\0';
+	return (string);
 }

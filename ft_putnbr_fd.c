@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 13:00:00 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 14:19:11 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:46:07 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned nbr;
+	unsigned int	nbr;
 
 	if (n < 0)
 	{
@@ -22,12 +22,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 	}
 	else
-	{
 		nbr = n;
-	}
 	if (nbr >= 10)
-	{
 		ft_putnbr_fd(nbr / 10, fd);
-	}
 	ft_putchar_fd(nbr % 10 + '0', fd);
 }

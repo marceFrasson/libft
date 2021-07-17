@@ -6,13 +6,13 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 22:16:33 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/21 19:03:41 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:02:23 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_nbrdigt(unsigned int nbr, int n)
+static int	ft_nbrdigt(unsigned int nbr, int n)
 {
 	unsigned int	count;
 
@@ -25,7 +25,7 @@ static int			ft_nbrdigt(unsigned int nbr, int n)
 	return (count);
 }
 
-char				*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	count;
 	unsigned int	nbr;
@@ -36,7 +36,8 @@ char				*ft_itoa(int n)
 	else
 		nbr = n;
 	count = ft_nbrdigt(nbr, n);
-	if (!(str = malloc((count + 1) * sizeof(char))))
+	str = malloc((count + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	*(str + count) = '\0';
 	while (count--)

@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 14:54:18 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 20:53:42 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:38:19 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,10 @@ char	*ft_strchr(const char *str, int c)
 	while (str1[i])
 	{
 		if (str1[i] == c)
-		{
 			return (&str1[i]);
-		}
 		i++;
 	}
 	if (!c)
-	{
 		return (&str1[i]);
-	}
 	return (0);
 }

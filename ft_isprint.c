@@ -6,20 +6,16 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 17:32:18 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/15 20:35:21 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:35:33 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

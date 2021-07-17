@@ -6,7 +6,7 @@
 /*   By: mfrasson <mfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 12:57:41 by mfrasson          #+#    #+#             */
-/*   Updated: 2021/02/19 22:41:16 by mfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:36:14 by mfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t size)
 	{
 		dst1[i] = src1[i];
 		if (src1[i] == (unsigned char)c)
-		{
 			return (&dst1[i + 1]);
-		}
 		i++;
 	}
 	return (NULL);
